@@ -1,0 +1,16 @@
+body {
+  background-color: gray;
+}
+
+h1 {
+  color: black;
+}
+
+span {
+  padding-top: 5px;
+  margin-left: 13px;
+}
+
+#fondo {
+  z-index: initial;
+}
