@@ -10,15 +10,15 @@ export const NavBar: FC = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
-        <Toolbar variant="dense">
+        <Toolbar variant="dense" style={{ background: 'orange' }}>
           <IconButton
             edge="start"
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
           ></IconButton>
-          <Typography variant="h6" color="inherit" component="div">
-            Photos
+          <Typography variant="h5" color="inherit" component="div">
+            Halloween
           </Typography>
         </Toolbar>
       </AppBar>

@@ -20,14 +20,20 @@ export const App = () => {
   return (
     <div>
       <NavBar />
-      <Title />
-      <InfoSpan />
       <Lottie
         options={defaultOptions}
         height={400}
         width={400}
-        style={{ position: 'absolute' }}
+        style={{
+          position: 'fixed',
+          margin: '0px',
+          padding: '0px',
+          background: 'black',
+          display: 'flex',
+        }}
       />
+      <Title />
+      <InfoSpan />
       <Box
         sx={{
           display: 'flex',
