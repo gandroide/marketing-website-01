@@ -9,28 +9,34 @@ import {
 import { FC } from 'react';
 import { CardProps } from '../interfaces';
 
-export const Feature: FC<CardProps> = ({ titleProps }) => {
+export const Feature: FC<CardProps> = ({
+  creatorProps,
+  titleProps,
+  descriptionProps,
+  categoryProps,
+  noteProps,
+}) => {
   return (
     <Container maxWidth="xs">
-      <Card sx={{ minWidth: 5 }}>
+      <Card sx={{ minWidth: 5 }} style={{ backgroundColor: 'orange' }}>
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            Word of the Day
+            {creatorProps}
           </Typography>
           <Typography variant="h5" component="div">
             {titleProps}
           </Typography>
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            adjective
+            {categoryProps}
           </Typography>
           <Typography variant="body2">
-            well meaning and kindly.
+            {descriptionProps}
             <br />
-            {'"a benevolent smile"'}
+            {noteProps}
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button size="small">Read More</Button>
         </CardActions>
       </Card>
     </Container>

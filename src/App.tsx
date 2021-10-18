@@ -6,7 +6,7 @@ import { InfoSpan } from './Components/InfoSpan';
 import { CardList } from './Components/CardList';
 import Lottie from 'react-lottie';
 import calabaza from './lottie/scary-cat.json';
-import { Home } from './Components/Home';
+import { NavBar } from './Components/NavBar';
 
 export const App = () => {
   const defaultOptions = {
@@ -19,6 +19,7 @@ export const App = () => {
   };
   return (
     <div>
+      <NavBar />
       <Title />
       <InfoSpan />
       <Lottie
@@ -34,7 +35,13 @@ export const App = () => {
           paddingBottom: '2rem',
         }}
       >
-        <CardList title="primera carta" />
+        <CardList
+          creatorProps={''}
+          titleProps={''}
+          categoryProps={''}
+          descriptionProps={''}
+          noteProps={''}
+        />
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <CustomButton />

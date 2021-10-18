@@ -6,7 +6,6 @@ export const InfoSpan = () => {
       <Box padding="20px">
         <Container maxWidth="xs">
           <Box
-            bgcolor="aqua"
             sx={{
               display: 'flex',
               justifyContent: 'center',

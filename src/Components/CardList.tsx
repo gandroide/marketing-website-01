@@ -1,17 +1,52 @@
 import { FC } from 'react';
 import { Feature } from './Feature';
+import { CardProps } from '../interfaces';
 
-const listOfCards = ['Marketing', 'Design', 'Collage', 'nueva Carta'];
-
-interface CardProps {
-  title: string;
-}
+const listOfCards = {
+  card: [
+    {
+      creator: 'Gandroide',
+      title: 'Marketing',
+      category: 'horror tech',
+      description: 'description1',
+      note: 'alguna nota',
+    },
+    {
+      creator: 'Gandroide',
+      title: 'Design',
+      category: 'events',
+      description: 'description2',
+      note: 'alguna nota',
+    },
+    {
+      creator: 'INeverLose',
+      title: 'Collage',
+      category: 'horror',
+      description: 'description3',
+      note: 'alguna nota',
+    },
+    {
+      creator: 'Azaru',
+      title: 'Movies',
+      category: 'others',
+      description: 'description4',
+      note: 'alguna nota',
+    },
+  ],
+};
 
 export const CardList: FC<CardProps> = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
-      {listOfCards.map((listOfCards, ind) => (
-        <Feature key={ind} titleProps={listOfCards} />
+      {listOfCards.card.map((props, ind) => (
+        <Feature
+          key={ind}
+          creatorProps={props.creator}
+          titleProps={props.title}
+          descriptionProps={props.description}
+          categoryProps={props.category}
+          noteProps={props.note}
+        />
       ))}
     </div>
   );
