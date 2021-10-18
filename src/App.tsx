@@ -18,11 +18,15 @@ export const App = () => {
     },
   };
   return (
-    <>
-      <Home />
+    <div>
       <Title />
       <InfoSpan />
-      <Lottie options={defaultOptions} height={400} width={400} />
+      <Lottie
+        options={defaultOptions}
+        height={400}
+        width={400}
+        style={{ position: 'absolute' }}
+      />
       <Box
         sx={{
           display: 'flex',
@@ -35,6 +39,6 @@ export const App = () => {
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <CustomButton />
       </Box>
-    </>
+    </div>
   );
 };
