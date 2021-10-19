@@ -9,7 +9,7 @@ import {
 import { FC } from 'react';
 import { CardProps } from '../interfaces';
 
-export const Feature: FC<CardProps> = ({
+export const SingleCard: FC<CardProps> = ({
   creatorProps,
   titleProps,
   descriptionProps,

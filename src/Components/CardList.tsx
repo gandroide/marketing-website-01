@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Feature } from './Feature';
+import { SingleCard } from './SingleCard';
 import { CardProps } from '../interfaces';
 
 const listOfCards = [
@@ -38,7 +38,7 @@ export const CardList: FC<CardProps> = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
       {listOfCards.map((props, ind) => (
-        <Feature
+        <SingleCard
           key={ind}
           creatorProps={props.creator}
           titleProps={props.title}
